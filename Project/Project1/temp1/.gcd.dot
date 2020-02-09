@@ -1,0 +1,27 @@
+digraph "CFG for 'gcd' function" {
+	label="CFG for 'gcd' function";
+
+	Node0x7fbc74d0cd90 [shape=record,label="{%2:\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store i32 %0, i32* %4, align 4\l  store i32 %1, i32* %5, align 4\l  %6 = load i32, i32* %4, align 4\l  %7 = icmp eq i32 %6, 0\l  br i1 %7, label %8, label %10\l|{<s0>T|<s1>F}}"];
+	Node0x7fbc74d0cd90:s0 -> Node0x7fbc74d0cc30;
+	Node0x7fbc74d0cd90:s1 -> Node0x7fbc74d0cf10;
+	Node0x7fbc74d0cc30 [shape=record,label="{%8:\l\l  %9 = load i32, i32* %5, align 4\l  store i32 %9, i32* %3, align 4\l  br label %37\l}"];
+	Node0x7fbc74d0cc30 -> Node0x7fbc74d0d0e0;
+	Node0x7fbc74d0cf10 [shape=record,label="{%10:\l\l  %11 = load i32, i32* %5, align 4\l  %12 = icmp eq i32 %11, 0\l  br i1 %12, label %13, label %15\l|{<s0>T|<s1>F}}"];
+	Node0x7fbc74d0cf10:s0 -> Node0x7fbc74d0cf50;
+	Node0x7fbc74d0cf10:s1 -> Node0x7fbc74d0cf90;
+	Node0x7fbc74d0cf50 [shape=record,label="{%13:\l\l  %14 = load i32, i32* %4, align 4\l  store i32 %14, i32* %3, align 4\l  br label %37\l}"];
+	Node0x7fbc74d0cf50 -> Node0x7fbc74d0d0e0;
+	Node0x7fbc74d0cf90 [shape=record,label="{%15:\l\l  %16 = load i32, i32* %4, align 4\l  %17 = load i32, i32* %5, align 4\l  %18 = icmp eq i32 %16, %17\l  br i1 %18, label %19, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x7fbc74d0cf90:s0 -> Node0x7fbc74d0cfd0;
+	Node0x7fbc74d0cf90:s1 -> Node0x7fbc74d0d010;
+	Node0x7fbc74d0cfd0 [shape=record,label="{%19:\l\l  %20 = load i32, i32* %4, align 4\l  store i32 %20, i32* %3, align 4\l  br label %37\l}"];
+	Node0x7fbc74d0cfd0 -> Node0x7fbc74d0d0e0;
+	Node0x7fbc74d0d010 [shape=record,label="{%21:\l\l  %22 = load i32, i32* %4, align 4\l  %23 = load i32, i32* %5, align 4\l  %24 = icmp sgt i32 %22, %23\l  br i1 %24, label %25, label %31\l|{<s0>T|<s1>F}}"];
+	Node0x7fbc74d0d010:s0 -> Node0x7fbc74d0d050;
+	Node0x7fbc74d0d010:s1 -> Node0x7fbc74d0d0a0;
+	Node0x7fbc74d0d050 [shape=record,label="{%25:\l\l  %26 = load i32, i32* %4, align 4\l  %27 = load i32, i32* %5, align 4\l  %28 = sub nsw i32 %26, %27\l  %29 = load i32, i32* %5, align 4\l  %30 = call i32 @gcd(i32 %28, i32 %29)\l  store i32 %30, i32* %3, align 4\l  br label %37\l}"];
+	Node0x7fbc74d0d050 -> Node0x7fbc74d0d0e0;
+	Node0x7fbc74d0d0a0 [shape=record,label="{%31:\l\l  %32 = load i32, i32* %4, align 4\l  %33 = load i32, i32* %5, align 4\l  %34 = load i32, i32* %4, align 4\l  %35 = sub nsw i32 %33, %34\l  %36 = call i32 @gcd(i32 %32, i32 %35)\l  store i32 %36, i32* %3, align 4\l  br label %37\l}"];
+	Node0x7fbc74d0d0a0 -> Node0x7fbc74d0d0e0;
+	Node0x7fbc74d0d0e0 [shape=record,label="{%37:\l\l  %38 = load i32, i32* %3, align 4\l  ret i32 %38\l}"];
+}
