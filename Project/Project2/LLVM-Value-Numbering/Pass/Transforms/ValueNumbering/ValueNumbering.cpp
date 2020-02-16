@@ -8,6 +8,8 @@
 #include <string>
 #include <map>
 #include <typeinfo>
+#include <iostream>
+#include <fstream>
 
 using namespace llvm;
 using namespace std;
@@ -23,39 +25,55 @@ struct ValueNumbering : public FunctionPass {
   std::map<llvm::Value*, int> hashmap;
   std::map<std::string, int> expressionmap;
   int vn = 1;
-  int vn_expression = 1;
+  // int vn_expression = 1;
 
-  int searchHash(Value* v, bool found){
+  int searchHash(Value* v, bool *found){
     auto search = hashmap.find(v);
     auto temp = vn;
     // errs() << v;
     if(search != hashmap.end()){
       temp = search->second;
-      found = true;
-      errs() << "true\t";
+      *found = true;
+      // errs() << "true\t";
     }
     else{
-      found = false;
-      errs() << "false\t";
+      *found = false;
+      // errs() << "false\t";
       hashmap.insert(make_pair(v, vn++));
     }
     return temp;
   }
 
-  bool searchExpression(string exp){
+  int searchExpression(string exp, bool *found){
     auto search = expressionmap.find(exp);
-    auto temp = vn_expression;
-    errs() << "\n" << exp << "\n";
+    auto temp = vn;
+    // vn_expression = vn;
+    // errs() << "\n" << exp << "\n";
     if(search != expressionmap.end()){
-      return true;
+      temp = search->second;
+      *found = true;
+      // errs() << "true\t";
     }
     else{
-      expressionmap.insert(make_pair(exp, vn_expression++));
-      return false;
+      expressionmap.insert(make_pair(exp, vn++));
+      *found = false;
+      // errs() << "false\t";
     }
+    return temp;
+  }
+
+  ofstream CreateOut(Function &F){
+    std::string file_name = F.getParent()->getSourceFileName();
+    file_name = file_name.substr(0, file_name.rfind("."));
+    file_name.append(".out");
+    ofstream outfile;
+    outfile.open(file_name, ios::app|ios::out);
+    return outfile;
   }
 
   bool runOnFunction(Function &F) override {
+    ofstream outfile = CreateOut(F);
+
     errs() << "ValueNumbering: \n";
     // errs() << F.getName() << "\n";
     
@@ -64,13 +82,18 @@ struct ValueNumbering : public FunctionPass {
       std::string operation;
       llvm::Value* op1;
       llvm::Value* op2;
+      llvm::Value* op3;
       int op_1;
       int op_2;
+      int op_temp_1;
+      int op_temp_2;
+      int op_3;
+      int op_expression;
       
       int counter = 1;
       for (auto& inst : basic_block)
       {
-        errs() << inst << "\n";
+        // errs() << inst << "\n";
         if (inst.isBinaryOp())
         {
           if(inst.getOpcode() == Instruction::Add){
@@ -95,23 +118,43 @@ struct ValueNumbering : public FunctionPass {
           }
           // errs() << op1 << "\t" << op2 << "\n";
 
-          bool found = new bool(false);
+          bool *found = new bool(false);
           op_1 = searchHash(op1, found);
           op_2 = searchHash(op2, found);
 
           // errs() << to_string(op_1) << "\t" << to_string(op_2) << "\n";
+          op_temp_1 = op_1;
+          op_temp_2 = op_2;
 
           if(op_1 > op_2){
-            swap(op_1, op_2);
+            swap(op_temp_1, op_temp_2);
           }
 
-          string expression = to_string(op_1) + operation + to_string(op_2);
-          if(searchExpression(expression)){
-            errs() << "This Expression is Redundancy:" << inst << "\n";
+          string expression = to_string(op_temp_1) + operation + to_string(op_temp_2);
+          op_expression = searchExpression(expression, found);
+
+          op3 = dyn_cast<Value>(&inst);
+          auto search_expression = hashmap.find(op3);
+          if(search_expression != hashmap.end()){
+            op_3 = search_expression->second;
           }
+          else{
+            hashmap.insert(make_pair(op3, op_expression));
+            op_3 = op_expression;
+          }
+
+          if(*found){
+            errs() << "This Expression is Redundancy:" << inst << "\n";
+            // vn--;
+          }
+          // op3 = dyn_cast<Value>(&inst);
+          // op_3 = searchHash(op3, found);
+          errs() << op_3 << "=" << op_1 << operation << op_2 << "\n";
+          outfile << op_3 << "=" << op_1 << operation << op_2 << "\n";
       }
     }
   }
+    outfile.close();
     return false;
   }
 }; // end of struct ValueNumbering
