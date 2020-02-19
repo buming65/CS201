@@ -103,9 +103,7 @@ Run the script in the test folder. We can get two result, one is in the terminal
 
 1. In the terminal, we can see which expression is redundancy.
 
-![image-20200213015920765](/Users/buming/Library/Application Support/typora-user-images/image-20200213015920765.png)
 
 2. And in the test folder, there are two output.
 
-   <img src="/Users/buming/Library/Application Support/typora-user-images/image-20200213020127415.png" alt="image-20200213020127415" style="zoom:50%;" /><img src="/Users/buming/Library/Application Support/typora-user-images/image-20200213020152941.png" alt="image-20200213020152941" style="zoom:50%;" />
 
