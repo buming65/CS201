@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.16.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering
+CMAKE_SOURCE_DIR = /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/buming/HelloPass-LLVM-master/Pass/build
+CMAKE_BINARY_DIR = /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LLVMValueNumberingPass.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/LLVMValueNumberingPass.dir/progress.make
 include CMakeFiles/LLVMValueNumberingPass.dir/flags.make
 
 CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o: CMakeFiles/LLVMValueNumberingPass.dir/flags.make
-CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o: /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/ValueNumbering.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/buming/HelloPass-LLVM-master/Pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o -c /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/ValueNumbering.cpp
+CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o: /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/ValueNumbering.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o -c /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/ValueNumbering.cpp
 
 CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/ValueNumbering.cpp > CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/ValueNumbering.cpp > CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.i
 
 CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/ValueNumbering.cpp -o CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/ValueNumbering.cpp -o CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.s
 
 # Object files for target LLVMValueNumberingPass
 LLVMValueNumberingPass_OBJECTS = \
@@ -80,7 +80,7 @@ LLVMValueNumberingPass_EXTERNAL_OBJECTS =
 libLLVMValueNumberingPass.so: CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o
 libLLVMValueNumberingPass.so: CMakeFiles/LLVMValueNumberingPass.dir/build.make
 libLLVMValueNumberingPass.so: CMakeFiles/LLVMValueNumberingPass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/buming/HelloPass-LLVM-master/Pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libLLVMValueNumberingPass.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libLLVMValueNumberingPass.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LLVMValueNumberingPass.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -93,6 +93,6 @@ CMakeFiles/LLVMValueNumberingPass.dir/clean:
 .PHONY : CMakeFiles/LLVMValueNumberingPass.dir/clean
 
 CMakeFiles/LLVMValueNumberingPass.dir/depend:
-	cd /Users/buming/HelloPass-LLVM-master/Pass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering /Users/buming/HelloPass-LLVM-master/Pass/build /Users/buming/HelloPass-LLVM-master/Pass/build /Users/buming/HelloPass-LLVM-master/Pass/build/CMakeFiles/LLVMValueNumberingPass.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build/CMakeFiles/LLVMValueNumberingPass.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LLVMValueNumberingPass.dir/depend
 

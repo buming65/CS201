@@ -6,26 +6,30 @@
 
 #IncludeRegexTransform: 
 
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/ValueNumbering.cpp
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/ValueNumbering.cpp
 llvm/Pass.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/Pass.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/Pass.h
 llvm/IR/Module.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/IR/Module.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/IR/Module.h
 llvm/IR/Function.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/IR/Function.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/IR/Function.h
 llvm/Support/raw_ostream.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/Support/raw_ostream.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/Support/raw_ostream.h
 llvm/IR/Type.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/IR/Type.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/IR/Type.h
 llvm/IR/Instructions.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/IR/Instructions.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/IR/Instructions.h
 llvm/IR/Instruction.h
-/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/llvm/IR/Instruction.h
+/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/llvm/IR/Instruction.h
 string
 -
 map
 -
 typeinfo
+-
+iostream
+-
+fstream
 -
 
 /Users/buming/llvm_clang/build/include/llvm/Config/abi-breaking.h

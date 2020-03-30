@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering/ValueNumbering.cpp" "/Users/buming/HelloPass-LLVM-master/Pass/build/CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o"
+  "/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering/ValueNumbering.cpp" "/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build/CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering
+# Install script for directory: /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/buming/HelloPass-LLVM-master/Pass/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.16.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering
+CMAKE_SOURCE_DIR = /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/buming/HelloPass-LLVM-master/Pass/build
+CMAKE_BINARY_DIR = /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build
 
 # Utility rule file for intrinsics_gen.
 
@@ -67,6 +67,6 @@ CMakeFiles/intrinsics_gen.dir/clean:
 .PHONY : CMakeFiles/intrinsics_gen.dir/clean
 
 CMakeFiles/intrinsics_gen.dir/depend:
-	cd /Users/buming/HelloPass-LLVM-master/Pass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering /Users/buming/HelloPass-LLVM-master/Pass/Transforms/ValueNumbering /Users/buming/HelloPass-LLVM-master/Pass/build /Users/buming/HelloPass-LLVM-master/Pass/build /Users/buming/HelloPass-LLVM-master/Pass/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/Transforms/ValueNumbering /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build /Users/buming/Documents/UCR/CS201/Project/Project2/LLVM-Value-Numbering/Pass/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/intrinsics_gen.dir/depend
 

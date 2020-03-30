@@ -1,5 +1,5 @@
-; ModuleID = 'Test.c'
-source_filename = "Test.c"
+; ModuleID = '1.c'
+source_filename = "1.c"
 target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-apple-macosx10.14.0"
 
@@ -17,30 +17,29 @@ define void @test(i32, i32, i32, i32, i32, i32) #0 {
   store i32 %3, i32* %10, align 4
   store i32 %4, i32* %11, align 4
   store i32 %5, i32* %12, align 4
-  store i32 1, i32* %7, align 4
-  store i32 2, i32* %8, align 4
   %13 = load i32, i32* %7, align 4
   %14 = load i32, i32* %8, align 4
   %15 = add nsw i32 %13, %14
   store i32 %15, i32* %9, align 4
-  %16 = load i32, i32* %8, align 4
-  %17 = load i32, i32* %7, align 4
-  %18 = add nsw i32 %16, %17
+  %16 = load i32, i32* %7, align 4
+  %17 = load i32, i32* %9, align 4
+  %18 = mul nsw i32 %16, %17
   store i32 %18, i32* %10, align 4
   %19 = load i32, i32* %7, align 4
-  %20 = load i32, i32* %8, align 4
-  %21 = mul nsw i32 %19, %20
-  store i32 %21, i32* %11, align 4
-  %22 = load i32, i32* %8, align 4
-  %23 = load i32, i32* %7, align 4
-  %24 = mul nsw i32 %22, %23
-  store i32 %24, i32* %12, align 4
-  %25 = load i32, i32* %9, align 4
-  %26 = load i32, i32* %9, align 4
-  %27 = mul nsw i32 %25, %26
-  store i32 %27, i32* %9, align 4
-  %28 = load i32, i32* %12, align 4
-  %29 = load i32, i32* %11, align 4
+  store i32 %19, i32* %11, align 4
+  %20 = load i32, i32* %7, align 4
+  %21 = add nsw i32 %20, 1
+  store i32 %21, i32* %7, align 4
+  %22 = load i32, i32* %7, align 4
+  %23 = load i32, i32* %8, align 4
+  %24 = add nsw i32 %22, %23
+  store i32 %24, i32* %10, align 4
+  %25 = load i32, i32* %11, align 4
+  %26 = load i32, i32* %8, align 4
+  %27 = add nsw i32 %25, %26
+  store i32 %27, i32* %12, align 4
+  %28 = load i32, i32* %11, align 4
+  %29 = load i32, i32* %12, align 4
   %30 = mul nsw i32 %28, %29
   store i32 %30, i32* %12, align 4
   ret void
